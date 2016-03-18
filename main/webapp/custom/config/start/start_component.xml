@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<config>
+   <scope>
+      <component id="initpath">
+      	<pages>
+      		<start>/custom/start/start.jsp</start>
+      	</pages>
+      	<class>com.sepe.nfo.components.Redirecciona</class>
+      </component>
+   </scope>
+</config>

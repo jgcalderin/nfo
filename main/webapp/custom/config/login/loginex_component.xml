@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<config version="1.0">
+   <scope>
+      <component id="login" extends="login:webtop/config/loginex_component.xml">
+         <pages>
+         	<start>/custom/login/loginex.jsp</start>
+         </pages>
+         <class>com.sepe.nfo.components.Login</class>
+      </component>
+   </scope>
+</config>

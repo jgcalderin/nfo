@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!--***********************************************************************-->
+
+<!--***********************************************************************-->
+
+<config version='1.0'>
+
+   <!-- this component doesn't handle display of search results of a dm_query object -->
+   <scope>
+
+      <!-- the simple search component definition -->
+      <component id="search" extends="search:webtop/config/search60_component.xml">
+
+         <pages>
+               <start>/custom/search/searchresults.jsp</start>
+         </pages>
+
+
+         <!-- Component specific Configuration -->
+
+         <!-- default search docbases and sources -->
+         <!-- a value of "current_docbase": search the current docbase -->
+         <!-- a value of "visible_docbases": search all the visible docbase -->
+         <!-- a value of "preferred_sources": search the preferred sources -->
+         <!-- a value of "all_sources": all the visible docbases and external sources -->
+         <defaultsources>current_docbase</defaultsources>
+
+         <!-- default object type for the search -->
+         <type>do_nfop_fld</type>
+
+         <!-- 'true' active or 'false' de-active term-hit highlighting -->
+         <highlight_matching_terms>false</highlight_matching_terms>
+
+         <!-- visibility and order of attribute columns -->
+         <!-- attribute names starting with uppercase are pseudo -->
+         <columns_list>
+            <loadinvisibleattribute>true</loadinvisibleattribute>
+         	<column>
+         		<attribute>object_name</attribute>
+         		<label>Nombre</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_cno</attribute>
+         		<label>CNO</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_year</attribute>
+         		<label>Año Informe</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_completo</attribute>
+         		<label>Completo?</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_provincia</attribute>
+         		<label>Provincia</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_agrupacion</attribute>
+         		<label>Agrupación</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_icua_tendencia</attribute>
+         		<label>Tendencia</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_icua_vacantes_dif</attribute>
+         		<label>Vacantes se cubren...</label>
+         	</column>
+         </columns_list>         
+      </component>
+   </scope>
+</config>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--***********************************************************************-->
+<config version="1.0">
+   <scope>
+      <component id="porcentajeaedocbaserepeatingattribute" extends="docbaserepeatingattribute:wdk/config/docbaserepeatingattribute_component.xml">
+         <pages>
+            <start>/custom/control/porcentajeAERepeatingAttributes.jsp</start>
+         </pages>
+         <class>com.sepe.nfo.controls.PercentClasesAEDocbaseRepeatingAttribute</class>
+      </component>
+   </scope>
+</config>

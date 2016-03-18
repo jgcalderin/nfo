@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--***********************************************************************-->
+<config version="1.0">
+   <scope type="do_nfop_fld">
+      <docbaseobjectconfiguration id="attributes">
+         <names>
+            <!-- apply to attribute -->
+            <!--            <attribute name='attribute_name'>-->
+            <!--               <valuehandler>class.which.implements.IDocbaseAttributeSetValueHandler</valuehandler>-->
+            <!--               <valueformatter>class.which.implements.IDocbaseAttributeValueFormatter</valueformatter>-->
+            <!--               <tagclass>class.which.extends.DocbaseAttributeTag</tagclass>-->
+            <!--               <labeltagclass>class.which.extends.DocbaseAttributeLabelTag</labeltagclass>-->
+            <!--               <valuetagclass>class.which.extends.DocbaseAttributeValueTag</valuetagclass>-->
+            <!--               <editcomponent>editComponentName</editcomponent>-->
+            <!--               <somecustomelement>values specific to tag implementation</somecustomelement>-->
+            <!--            </attribute>-->
+            <attribute name="do_nfop_ctra_idioma">
+               <editcomponent>idiomasdocbaserepeatingattribute</editcomponent>
+            </attribute>
+            <attribute name="do_nfop_ctra_idioma_c">
+               <editcomponent>idiomascdocbaserepeatingattribute</editcomponent>
+            </attribute>
+            <attribute name="do_nfop_aer_titulaciones">
+               <editcomponent>clasesaedocbaserepeatingattribute</editcomponent>
+            </attribute>
+            <attribute name="do_nfop_aer_perc_contrat">
+               <editcomponent>porcentajeaedocbaserepeatingattribute</editcomponent>
+            </attribute>
+            <attribute name="do_nfop_ctra_ofiti">
+               <editcomponent>ofimaticadocbaserepeatingattribute</editcomponent>
+            </attribute>
+            <attribute name="do_nfop_ctra_ofiti_c">
+               <editcomponent>nivelofimaticadocbaserepeatingattribute</editcomponent>
+            </attribute>
+         </names>
+      </docbaseobjectconfiguration>
+   </scope>
+</config>

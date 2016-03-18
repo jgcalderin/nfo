@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="plantilla" pageWidth="595" pageHeight="842" columnWidth="545" leftMargin="25" rightMargin="25" topMargin="15" bottomMargin="20">
+	<style name="Crosstab Data Text" isDefault="false" hAlign="Center"/>
+	<subDataset name="dataset12">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="actividad" class="java.lang.String">
+			<fieldDescription><![CDATA[actividad]]></fieldDescription>
+		</field>
+		<field name="porcentaje" class="java.lang.Double">
+			<fieldDescription><![CDATA[porcentaje]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/inem/sappweb/genDocs/apps/disw/nfo/plantillas/"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="actividades" class="java.util.List">
+		<fieldDescription><![CDATA[actividades]]></fieldDescription>
+	</field>
+	<field name="conoJuridicos" class="java.util.List">
+		<fieldDescription><![CDATA[conoJuridicos]]></fieldDescription>
+	</field>
+	<field name="aerTotalContratos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[aerTotalContratos]]></fieldDescription>
+	</field>
+	<field name="conoIdiomas" class="java.util.List">
+		<fieldDescription><![CDATA[conoIdiomas]]></fieldDescription>
+	</field>
+	<field name="conoFinancieros" class="java.util.List">
+		<fieldDescription><![CDATA[conoFinancieros]]></fieldDescription>
+	</field>
+	<field name="sumaPorcentaje" class="java.lang.String">
+		<fieldDescription><![CDATA[sumaPorcentaje]]></fieldDescription>
+	</field>
+	<field name="conoInformatica" class="java.util.List">
+		<fieldDescription><![CDATA[conoInformatica]]></fieldDescription>
+	</field>
+	<field name="necesidades" class="java.lang.String">
+		<fieldDescription><![CDATA[necesidades]]></fieldDescription>
+	</field>
+	<field name="conoGenericos" class="java.lang.String">
+		<fieldDescription><![CDATA[conoGenericos]]></fieldDescription>
+	</field>
+	<field name="aerDivision" class="java.lang.String">
+		<fieldDescription><![CDATA[aerDivision]]></fieldDescription>
+	</field>
+	<field name="conoAdminPublicas" class="java.util.List">
+		<fieldDescription><![CDATA[conoAdminPublicas]]></fieldDescription>
+	</field>
+	<field name="anio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[anio]]></fieldDescription>
+	</field>
+	<field name="aerAnio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[aerAnio]]></fieldDescription>
+	</field>
+	<field name="ocupacion" class="java.lang.String">
+		<fieldDescription><![CDATA[ocupacion]]></fieldDescription>
+	</field>
+	<field name="vacantes" class="java.lang.String">
+		<fieldDescription><![CDATA[vacantes]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="123" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="0" y="81" width="545" height="21" isRemoveLineWhenBlank="true" forecolor="#002060"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ocupacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="label_ocupacion_cno" positionType="Float" x="0" y="102" width="143" height="20"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OCUPACIÓN (CNO-2011) Año ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="143" y="102" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{anio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="46" y="44" width="462" height="20" forecolor="#002060"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FICHA DE LAS NECESIDADES FORMATIVAS DE LA OCUPACIÓN]]></text>
+			</staticText>
+		</band>
+		<band height="198" splitType="Stretch">
+			<staticText>
+				<reportElement key="label_conocimientos" positionType="Float" mode="Opaque" x="0" y="7" width="545" height="20" forecolor="#17365D" backcolor="#DBE5F1"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.- Necesidades formativas]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="36" width="545" height="129" isPrintWhenDetailOverflows="true"/>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="37" width="272" height="28" isPrintWhenDetailOverflows="true" forecolor="#17365D" backcolor="#DBE5F1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Necesidades formativas detectadas en competencias técnico / profesionales
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="273" y="37" width="272" height="28" isPrintWhenDetailOverflows="true" forecolor="#17365D" backcolor="#DBE5F1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Necesidades formativas en competencias transversales]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Transparent" x="0" y="66" width="272" height="59" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" isPrintRepeatedValues="false" x="9" y="13" width="234" height="20" isRemoveLineWhenBlank="true"/>
+					<textElement lineSpacing="Single">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{necesidades}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="blank_line" positionType="Float" x="9" y="33" width="234" height="20"/>
+					<textElement/>
+					<text><![CDATA[]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="272" y="66" width="273" height="99" isRemoveLineWhenBlank="true"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<subreport isUsingCache="false">
+					<reportElement positionType="Float" x="7" y="7" width="260" height="10"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{conoIdiomas})]]></dataSourceExpression>
+					<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "subreport_idiomas.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport isUsingCache="false">
+					<reportElement positionType="Float" x="7" y="17" width="260" height="10"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{conoInformatica})]]></dataSourceExpression>
+					<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "subreport_informatica.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport isUsingCache="false">
+					<reportElement positionType="Float" x="7" y="27" width="260" height="10"/>
+					<subreportParameter name="TITULO">
+						<subreportParameterExpression><![CDATA["CONOCIMIENTOS FINANCIEROS"]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{conoFinancieros})]]></dataSourceExpression>
+					<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "subreport_conocimientos.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport isUsingCache="false">
+					<reportElement positionType="Float" x="7" y="37" width="260" height="10"/>
+					<subreportParameter name="TITULO">
+						<subreportParameterExpression><![CDATA["CONOCIMIENTOS NORMATIVOS / JURÍDICOS"]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{conoJuridicos})]]></dataSourceExpression>
+					<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "subreport_conocimientos.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport isUsingCache="false">
+					<reportElement positionType="Float" x="7" y="47" width="260" height="10"/>
+					<subreportParameter name="TITULO">
+						<subreportParameterExpression><![CDATA["CONOCIMIENTOS DE LAS ADMINISTRACIONES PÚBLICAS"]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{conoAdminPublicas})]]></dataSourceExpression>
+					<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "subreport_conocimientos.jasper"]]></subreportExpression>
+				</subreport>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="7" y="77" width="260" height="12">
+						<printWhenExpression><![CDATA[new Boolean($F{conoGenericos} != null && !$F{conoGenericos}.equals(""))]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{conoGenericos}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="7" y="57" width="260" height="20">
+						<printWhenExpression><![CDATA[new Boolean($F{conoGenericos}!=null && !$F{conoGenericos}.equals(""))]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[CONOCIMIENTOS GENÉRICOS]]></text>
+				</staticText>
+			</frame>
+			<line>
+				<reportElement positionType="Float" x="0" y="65" width="545" height="1" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<line>
+				<reportElement x="272" y="36" width="1" height="29" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="9" y="133" width="253" height="19"/>
+				<textElement>
+					<font fontName="Arial" size="7" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[*Tecnologías y herramientas utilizadas. Identificación, breve descripción y frecuencia de uso de las mismas.]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="0" y="165" width="545" height="30">
+					<printWhenExpression><![CDATA[new Boolean($F{vacantes}!=null && !$F{vacantes}.equals(""))]]></printWhenExpression>
+				</reportElement>
+				<rectangle>
+					<reportElement positionType="Float" x="0" y="-1" width="545" height="30"/>
+				</rectangle>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" x="9" y="5" width="530" height="20"/>
+					<textElement textAlignment="Justified">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{vacantes}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="177" splitType="Prevent">
+			<printWhenExpression><![CDATA[new Boolean($F{actividades}.size() > 0)]]></printWhenExpression>
+			<staticText>
+				<reportElement key="" mode="Opaque" x="0" y="13" width="545" height="20" forecolor="#17365D" backcolor="#DBE5F1"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.- Actividades Económicas más representativas en la contratación]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement stretchType="RelativeToTallestObject" x="-6" y="42" width="545" height="135"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="25" y="50" width="123" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Total contratos de la ocupación en    ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="149" y="50" width="19" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{aerAnio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="168" y="50" width="5" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="177" y="50" width="100" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("#,##0").format($F{aerTotalContratos})]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="8" y="87" width="500" height="17"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset12">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{actividades})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="17">
+						<textField>
+							<reportElement x="8" y="0" width="384" height="17"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="8"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[$F{actividad}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="394" y="0" width="95" height="17"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+								<font fontName="Arial" size="8"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat(" #,#0 %").format($F{porcentaje})]]></textFieldExpression>
+						</textField>
+						<rectangle>
+							<reportElement mode="Transparent" x="0" y="0" width="500" height="17"/>
+						</rectangle>
+						<line>
+							<reportElement x="393" y="0" width="1" height="17"/>
+						</line>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement x="8" y="70" width="500" height="17" backcolor="#DBE5F1"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="9" y="70" width="391" height="17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Clases de Actividades Económicas con mayor contratación (*)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="401" y="70" width="1" height="17"/>
+			</line>
+			<staticText>
+				<reportElement x="402" y="70" width="106" height="17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[% contratación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="25" y="130" width="494" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[La división de Actividad Económica que mantiene la tendencia de mayor contratación de estos profesionales durante los últimos cuatro años es: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="46" y="150" width="436" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Arial" size="8" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{aerDivision}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="36" y="106" width="472" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="8" isItalic="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["(*) Actividades Económicas que concentran más del " + $F{sumaPorcentaje}.toString() + "% de la contratación en esta ocupación"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="53" y="163" width="100" height="13"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

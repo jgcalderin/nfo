@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!-- customizacion: se aumenta el widh de los listbox a 450                -->
+<config version="1.0">
+   <scope>
+      <component id="docbaserepeatingattribute" extends="docbaserepeatingattribute:wdk/config/docbaserepeatingattribute_component.xml">
+         <pages>
+            <start>/custom/repeating/repeatingAttributes.jsp</start>        
+         </pages>
+      </component>
+   </scope>
+</config>

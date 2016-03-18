@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config version="1.0">
+   <scope type="do_nfop_fld">
+      <action id="informenecesidades">
+         <params>
+            <param name="objectId" required="true"/>
+			<param name="type" required="false"/>
+			<param name="totalrows" required="false"/>
+         </params>
+		 <execution class="com.documentum.web.formext.action.LaunchComponent">
+			<component>informenecesidades</component>
+			<container>dialogcontainer</container>
+		 </execution>
+      </action>
+    </scope>
+    <scope>
+       <action id="informecompleto">
+         <params>
+            <param name="selection" required="false" />
+         </params>
+         <preconditions>
+           <precondition class="com.documentum.webcomponent.library.actions.ExportToCsvPrecondition"/>
+         </preconditions>
+         <execution class="com.documentum.web.formext.action.LaunchComponent">
+            <container>dialogcontainer</container>
+            <component>informecompleto</component>
+         </execution>
+         <invocation>
+            <modalpopup>
+               <windowsize>large</windowsize>
+               <refreshparentwindow>never</refreshparentwindow>
+            </modalpopup>
+         </invocation>
+      </action>
+      <action id="informecompletoonselectedrows">
+         <desc>
+            TBD.
+         </desc>
+         <params>
+            <param name="selection" required="false" />
+         </params>
+         <preconditions>
+           <precondition class="com.documentum.webcomponent.library.actions.ExportToCsvPrecondition"/>
+         </preconditions>
+         <execution class="com.documentum.web.formext.action.LaunchComponent">
+            <container>dialogcontainer</container>
+            <component>informecompleto</component>
+         </execution>
+         <invocation>
+            <modalpopup>
+               <windowsize>large</windowsize>
+               <refreshparentwindow>never</refreshparentwindow>
+            </modalpopup>
+         </invocation>
+      </action>
+     </scope>
+</config>
+ 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config version="1.0">
+   <scope location="/NFO">
+      <component id="newfolder" extends="newfolder:webcomponent/config/library/create/newfolder_component.xml">
+         <base_type>do_nfop_fld</base_type>
+         <default_type>do_nfop_fld</default_type>
+      </component>
+   </scope>   
+</config>

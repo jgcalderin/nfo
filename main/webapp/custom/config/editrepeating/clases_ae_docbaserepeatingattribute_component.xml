@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--***********************************************************************-->
+<config version="1.0">
+   <scope>
+      <component id="clasesaedocbaserepeatingattribute" extends="docbaserepeatingattribute:wdk/config/docbaserepeatingattribute_component.xml">
+         <class>com.sepe.nfo.controls.ClasesAEDocbaseRepeatingAttribute</class>
+      </component>
+   </scope>
+</config>

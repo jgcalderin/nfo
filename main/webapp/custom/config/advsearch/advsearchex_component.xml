@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Confidential Property of Documentum, Inc.                             -->
+<!--                                                     				   -->
+<config version="1.0">
+   <scope>
+      <component id="advsearch" extends="advsearch:webtop/config/advsearchex_component.xml">
+         <pages>
+            <start>/custom/search/advsearchex.jsp</start>
+         </pages>
+         <includetypes>do_nfop_fld</includetypes>
+         <class>com.sepe.nfo.components.AdvSearchEx</class>
+      </component>
+   </scope>
+</config>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Developer's Comments
+# Parameters
+/* includetypes                         Comma-delimited list of object types to 
+                                        display for search. Subtypes of the 
+                                        selected type will also be searched. 
+                                        Overrides the default set in the 
+                                        <includetypes> element. 
+*/
+/* component                            Name of the component within the 
+                                        container 
+*/
+/* drilldown                            Set to true to use the drilldown view by 
+                                        default to display the search results. 
+                                        This parameter is set to false in Webtop 
+                                        when the user selects classic view in 
+                                        preferences. 
+*/
+/* folderpath                           Specifies the initial folder path for 
+                                        the search location. This value is used 
+                                        if the user has not set a search 
+                                        location preference. 
+*/
+/* objectId                             Specifies the object id of the saved 
+                                        search to be revised 
+*/
+/* queryId                              Internally used to identify the current 
+                                        search context
+*/
+/* showwait                             Not used 
+*/
+/* type                                 Initial search type, defaults to the 
+                                        first type in includetypes 
+*/
+/* usepreviousinput                     Set to true to restore previous search 
+                                        criteria input, if possible 
+*/
+#
+# Elements
+/* <includetypes>                       Comma-delimited list of object types to 
+                                        display for search. Subtypes of the 
+                                        selected type will also be searched. 
+*/
+#
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->

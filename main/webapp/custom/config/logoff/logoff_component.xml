@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ ******************************************************************************
+ ******************************************************************************
+-->
+<config version="1.0">
+   <scope>
+      <component id="logoff" extends="logoff:webtop/config/logoff_component.xml">
+      	<pages>
+      		<start>/custom/logoff/logoff.jsp</start>
+         </pages>
+      </component>
+   </scope>
+</config>

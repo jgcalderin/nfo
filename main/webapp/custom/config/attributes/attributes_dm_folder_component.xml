@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<config version="1.0">
+   <!-- dm_folder specific version -->
+   <scope type="do_nfop_fld">
+      <component id="attributes" extends="attributes:webcomponent/config/library/attributes/attributes_dm_folder_component.xml">
+         <pages>
+            <start>/custom/attributes/attributes_ocupacion.jsp</start>
+            <tab2>/custom/attributes/attributes_comp_transversales.jsp</tab2>
+            <tab3>/custom/attributes/attributes_info_cualitativa.jsp</tab3>
+            <tab4>/custom/attributes/attributes_aaee_representativas.jsp</tab4>
+            <tab5>/custom/attributes/attributes_anexos.jsp</tab5>
+            <diferencias>/custom/attributes/diferencias.jsp</diferencias>
+            <cobertura>/custom/attributes/cobertura.jsp</cobertura>
+            <editaridiomas>/custom/attributes/editaridiomas.jsp</editaridiomas>
+            <editarofiti>/custom/attributes/editarofiti.jsp</editarofiti>
+            <editartitulaciones>/custom/attributes/editartitulaciones.jsp</editartitulaciones>
+            <editarcertificados>/custom/attributes/editarcertificados.jsp</editarcertificados>
+         </pages>
+         <class>com.sepe.nfo.components.MyAttributes</class>
+         <showpagesastabs>false</showpagesastabs>
+      </component>
+   </scope>
+</config>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Developer's Comments
+# Parameters
+/* enableShowAll                        (Optional) Boolean: Displays the "Show 
+                                        all attributes" link (true) or hides it 
+                                        (false). The default depends on the 
+                                        user's role: true for administrators, 
+                                        false for all non-administrator users. 
+*/
+/* objectId                             (Required) (Required) This is the ID of 
+                                        the object for which attributes are to 
+                                        be shown. 
+*/
+/* readOnly                             (Optional) Boolean: Displays the 
+                                        attributes as read-only (true) or in 
+                                        edit mode (false). This value does not 
+                                        override the state of the attributes in 
+                                        the repository. The value of this 
+                                        parameter does override individual 
+                                        readonly attributes that are set to 
+                                        false on the docbaseattribute controls 
+                                        in the UI. 
+*/
+#
+# Elements
+/* <showpagesastabs>                    Set to true to display attribute 
+                                        categories as tabs. 
+*/
+/* <filter>                             Contains <enableShowAll>. 
+                                        Determines the criteria for activating 
+                                        the enableShowAll functionality. In the 
+                                        default configuration, the filter 
+                                        attribute role is set to administrator.
+                                        As a result, only administrators are 
+                                        able to view the extended set of 
+                                        attributes. Applies to all types. 
+*/
+/* <filter>.<enableShowAll>             Boolean: Set to true to display the 
+                                        "Show all attributes" link within the 
+                                        filter. Applies to all types. 
+*/
+/* <readOnly>                           Boolean: Set to true to display the 
+                                        attributes as read-only. Applies to all 
+                                        types. This element performs the same 
+                                        operation as the readOnly parameter. 
+                                        The readOnly parameter takes precedence. 
+*/
+#
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->

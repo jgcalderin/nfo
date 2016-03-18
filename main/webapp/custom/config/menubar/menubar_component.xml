@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config version="1.0">
+   <scope location="/NFO">
+      <component id="menubar" extends="menubar:webcomponent/config/library/menubar/menubar_component.xml">
+         <nlsbundle>MenuBarNlsProp</nlsbundle>
+      </component>
+      <menuconfig modifies="menubar_tools_menu:webcomponent/config/library/menubar/menubar_component.xml">
+      		<insertbefore path="menu[name=tools_menu].actionmenuitem[action=exportrowstocsv]">
+				<actionmenuitem dynamic="genericnoselect" name="informecompleto" value="Informe Completo" action="informecompleto" showifinvalid="false" showifdisabled="false"/>
+				<actionmenuitem dynamic="multiselect" name="informecompletoonselectedrows" value="Informe Completo(para filas seleccionadas)" action="informecompletoonselectedrows" showifinvalid="false" showifdisabled="false"/>
+			</insertbefore>
+      </menuconfig>
+   </scope>
+</config>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config version="1.0">
+   <scope>
+      <component id="objectlist" extends="objectlist:webtop/config/objectlist_component.xml">
+         <columns>
+         	<column>
+         		<attribute>r_object_id</attribute>
+         		<visible>false</visible>
+         	</column>
+         	<column>
+         		<attribute>object_name</attribute>
+         		<label>Nombre</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_cno</attribute>
+         		<label>CNO</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_year</attribute>
+         		<label>Año Informe</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_completo</attribute>
+         		<label>Completo?</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_provincia</attribute>
+         		<label>Provincia</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_agrupacion</attribute>
+         		<label>Agrupación</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_icua_tendencia</attribute>
+         		<label>Tendencia</label>
+         	</column>
+         	<column>
+         		<attribute>do_nfop_icua_vacantes_dif</attribute>
+         		<label>Vacantes se cubren...</label>
+         	</column>
+         </columns>
+         <columnpreferenceid>nfop</columnpreferenceid>
+         <class>com.sepe.nfo.components.ObjectList</class>
+      </component>
+   </scope>
+</config>

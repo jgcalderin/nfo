@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--***********************************************************************-->
+<config version="1.0">
+   <scope>
+      <component id="idiomasdocbaserepeatingattribute" extends="docbaserepeatingattribute:wdk/config/docbaserepeatingattribute_component.xml">
+         <class>com.sepe.nfo.controls.IdiomasDocbaseRepeatingAttribute</class>
+      </component>
+   </scope>
+</config>

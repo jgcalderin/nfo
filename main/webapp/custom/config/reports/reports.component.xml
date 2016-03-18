@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config version="1.0">
+	<scope>
+		<component id="informenecesidades">
+			<params>
+				<param name="objectId" required="true"/>
+				<param name="type" required="false"/>
+			</params>
+			<pages>
+				<start>/custom/reports/informenecesidades.jsp</start>
+			</pages>
+			<class>com.sepe.nfo.components.InformeNecesidades</class>
+		</component>
+		<component id="informecompleto">
+
+	         <!-- Basado en exporttocsv -->
+	         <pages>
+	            <start>/custom/reports/informecompleto.jsp</start>
+	         </pages>
+	
+	         <params>
+	             <param name="selection" required="false"/>
+	         </params>
+	
+	         <class>com.sepe.nfo.components.InformeCompleto</class>
+	         <helpcontextid></helpcontextid>
+	
+	         <!-- Default encoding format is UTF-8.
+	         If the export data contains any Non ASCII characters (e.g. the german characters), use UnicodeLittle encoding format-->
+	
+	         <characterencoding>UTF-8</characterencoding>
+	         <!--<characterencoding>UnicodeLittle</characterencoding>-->
+
+		</component>
+	</scope>
+</config>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config version="1.0">
+   <scope location="/NFO">
+      <component id="newfoldercontainer" extends="newfoldercontainer:webcomponent/config/library/create/newfoldercontainer_component.xml">
+         <contains>
+            <component requiresVisit="true">newfolder</component>
+         </contains>
+         <class>com.sepe.nfo.components.NewFolderContainer</class>
+      </component>
+   </scope>
+</config>

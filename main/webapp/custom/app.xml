@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<config>
+   <scope>
+      <application extends="webtop/app.xml">
+         <!-- Flag to enable the modal popup -->
+         <modalpopup>
+            <filter clientenv='webbrowser'>
+               <enabled>false</enabled>
+            </filter>
+
+            <!-- List of action invocation post processors -->
+            <actioninvocationpostprocessors>
+               <!--
+                  To modify the list of post processors, use the config service modification syntax.
+                  The post processor element should follow this syntax:
+                  <postprocessor id="uniqueId" action="yourAction" class="YourActionInvocationPostProcessor"/>
+               -->
+               <postprocessor id="viewvdm" action="view" class="com.documentum.web.formext.action.ViewActionInvocationPostProcessor"/>
+               <postprocessor id="foreignobj" class="com.documentum.web.formext.action.ForeignObjActionInvocationPostProcessor"/>
+            </actioninvocationpostprocessors>
+         </modalpopup>
+         <language>
+            <!-- List of Locales supported by this application -->
+            <supported_locales>
+               <locale>es_ES</locale>
+            </supported_locales>
+
+            <!-- Default Locale -->
+            <!-- Serves as the initial selected locale for user, -->
+            <!-- will be overriden if user selects a new locale later on -->
+            <default_locale>es_ES</default_locale>
+
+            <!-- Fall back to English locale -->
+            <!-- Specify whether wdk falls back to corresponding english (US) locale string
+                 if a resource string is not found for a specified locale -->
+            <fallback_to_english_locale>false</fallback_to_english_locale>
+         </language>
+         <contentxfer>
+
+            <!-- The content transfer mechanism can be configured with role qualifier filter.
+               For example:
+
+                  Create a role/group called ucfrole, then add all users who can use the ucf mechanism to this group
+                  in the system
+                  <filter role="ucfrole" >
+                     <mechanism>ucf</mechanism>
+                  </filter>
+
+                  Create a role/group called httpgroup, then add all users who can use the http mechanism to this group
+                  in the system
+                  <filter role="httpgroup" >
+                     <mechanism>http</mechanism>
+                  </filter>
+            -->
+
+            <!-- The default content transfer mechanism, should not be filtered with any qualifiers -->
+            <default-mechanism>http</default-mechanism>
+
+
+            <!-- 5.3.x ACS content transfer settings
+            <acs>
+
+            <enable> : true/false
+
+               true [ default ]
+                  Content transfer operations will attempt to use ACS for content transfer.
+                  (limited to outbound operations in 5.3 SP1)
+               false
+                  ACS will not be used for any content transfer operations.
+
+            <attemptsurrogateget> : true/false
+
+               true [ default ]
+                  Content transfer operations will attempt to use ACSs which require surrogate gets to obtain content.
+               false
+                  Content transfer operations will not use ACSs which require surrogate gets.
+
+            <maintainvirtuallinks> : true/false
+
+               NOTE: This flag is only applicable to HTTP VIEW content transfer operations.
+
+               true [ default ]
+                  HTTP VIEW operations will not use ACS and instead use the virtual link handler in order
+                  to maintain relative links
+               false
+                  HTTP VIEW operations will use ACS and relative links will be broken.
+            -->
+
+            <!--  Begin {D6 accelerated content transfer (ACS) settings}  -->
+
+            <!-- <accelerated-read> :
+                  This is for accelerated Read, and it replaces the correpsonding 5.3.x <acs> configurations.
+                  It allows accelerated read and write to be switched on and off separately.
+
+                  For backward compatibility, WDK D6 first looks up the <acs> tag before looking up the
+                  <accelerated-read> tag.
+            -->
+            <accelerated-read>
+               <!-- when set to be "true", enables ACS, and, when optimal, BOCS read operations -->
+               <enabled>true</enabled>
+               <!-- the followings are the existing options under the 5.3.x "acs" tag -->
+               <attemptsurrogateget>true</attemptsurrogateget>
+               <maintainvirtuallinks>true</maintainvirtuallinks>
+            </accelerated-read>
+
+            <!-- <accelerated-write> :
+                  A separate configuration block for accelerated Write
+            -->
+            <accelerated-write>
+               <!-- when set to be "true", enables ACS, and, when optimal, BOCS write operations -->
+               <enabled>true</enabled>
+               <!-- when set to:
+                     1. "prohibit-async" - application doesn't allow BOCS write asynchronously
+                     2. "default-sync" - application should see content written from BOCS to ACS synchronously by default
+                     3. "default-async" - application should see content written from BOCS to ACS asynchronously by default
+                 -->
+               <bocs-write-mode>prohibit-async</bocs-write-mode>
+               <!-- when set to "true", allows override of default BOCS write mode by users
+                     (in general, it should be scoped with <filter> tag, e.g. role-based) -->
+               <allow-override-bocs-write-mode>false</allow-override-bocs-write-mode>
+            </accelerated-write>
+            <!--  End {D6 accelerated (ACS) content transfer settings}  -->
+
+            <!--Enable OLE support-->
+            <embedded-links-scan>
+               <enabled>false</enabled>
+            </embedded-links-scan>
+
+            <!-- Enable warning message for read-only copy download if document is alredy checkedout by other user or on other host by same user -->
+             <suppress-error-for-locked-content>
+                 <enabled>false</enabled>
+              </suppress-error-for-locked-content>
+
+            <server>
+               <contentlocationwindows>C:\Documentum\contentXfer</contentlocationwindows>
+               <contentlocationunix>/tmp/documentum/contentXfer</contentlocationunix>
+               <debug>false</debug>
+            </server>
+            <!-- Value of request input timeout in seconds. This is the value set to the dfc and ucf events request inputs.
+            If the value is 0 then request input timeout uses the session timeout value -->
+            <requestinput-timeout>0</requestinput-timeout>
+
+         </contentxfer>
+      </application>
+   </scope>
+</config>
+ 

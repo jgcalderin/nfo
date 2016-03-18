@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config version="1.0">
+	<scope location="/NFO">
+		<component id="nfoimportfile">
+			<params>
+				<param name="objectId" required="true"/>
+				<param name="foldername" required="false"/>
+			</params>
+			<pages>
+				<start>/custom/import/import.file.jsp</start>
+			</pages>
+			<class>com.sepe.nfo.components.ImportFileComponent</class>
+		</component>
+	</scope>
+</config>

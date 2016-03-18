@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--***********************************************************************-->
+<config version="1.0">
+   <scope>
+      <component id="about" extends="about:webtop/config/about_component.xml">
+         <pages>
+            <start>/custom/about/about.jsp</start>
+         </pages>
+      </component>
+   </scope>
+</config>
+

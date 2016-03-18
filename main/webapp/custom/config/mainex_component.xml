@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Confidential Property of Documentum, Inc.                             -->
+<!-- (c) Copyright Documentum, Inc. 2001.                                  -->
+<!-- All Rights reserved.                                                  -->
+<!-- May not be used without prior written agreement                       -->
+<!-- signed by a Documentum corporate officer.                             -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Project        WebTop                                                 -->
+<!-- Module         Main                                                   -->
+<!-- File           mainex_component.xml                                   -->
+<!-- Description    Main View Launcher Component Definition                -->
+<!-- Tab width      3                                                      -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- VCS Maintained Data                                                   -->
+<!--                                                                       -->
+<!-- Revision       $Revision: 2$                                          -->
+<!-- Modified on    $Date: 1/2/2007 11:41:06 PM$                          -->
+<!--                                                                       -->
+<!-- Log at EOF                                                            -->
+<!--***********************************************************************-->
+<!--  customizacion: sacamos el mainex.jsp al custom  para ocultar el browsertree-->
+
+<config>
+   <scope>
+      <component id="main" extends="main:webtop/config/mainex_component.xml">
+         <pages>
+            <start>/webtop/main/mainex.jsp</start>
+            <classic>/custom/main/mainex.jsp</classic>
+            <streamline>/webtop/main/mainex.jsp</streamline>
+         </pages>
+      </component>
+   </scope>
+</config>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Developer's Comments
+# Parameters
+/* entryPage                            Specifies the entry view. Supported 
+                                        values: classic and streamline. If 
+                                        entryPage is not specified, the user's 
+                                        preference is used. If no preference, 
+                                        the default view specified in the 
+                                        &lt;entrypage> element is used. 
+*/
+/* entrySection                         Determines the browsertree node (classic 
+                                        view) or tab (streamline view) to start 
+                                        in. If entrySection is not specified, 
+                                        the cabinets view is displayed by 
+                                        default for both classic and streamline 
+                                        views. The section values are described 
+                                        below:
+ 
+                                        Classic view: The section is the 
+                                        Docbase tree node. Valid values are 
+                                        homecabinet_classic, cabinets, 
+                                        inboxclassic, subscriptions_classic, 
+                                        myfiles_classic, and administration. 
+                                        These values correspond to node IDs in 
+                                        the browsertree component definition 
+                                        file. 
+
+                                        Streamline view: The section 
+                                        determines the start tab. Valid values 
+                                        are homecabinet_drilldown, 
+                                        streamlineview, inboxstreamline, 
+                                        myfiles_streamline, and 
+                                        subscriptions_streamline. These values 
+                                        are specified as tab component IDs in 
+                                        the tabbar component definition file. 
+*/
+/* objectId                             Determines the object of the bookmark (a 
+                                        folder or an object). If the ID is a 
+                                        folder or cabinet, the folder or cabinet 
+                                        is displayed. If the ID is an object, 
+                                        the contents of the containing folder 
+                                        are displayed. The objectId argument 
+                                        cannot be used with an entrySection 
+                                        argument. 
+*/
+/* callerClientId                       Internally generated ID for the client 
+                                        browser 
+*/
+#
+# Elements
+/* <entrypage>                          Specifies the default entry view if the 
+                                        entryPage parameter is not supplied in 
+                                        the request 
+*/
+#
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+

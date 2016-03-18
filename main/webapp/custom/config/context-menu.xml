@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config version="1.0">
+    <scope>
+        <menuconfig modifies="context-menu:webcomponent/config/actions/dm_folder_actions.xml">
+            <insertafter path="actionmenuitem[action=properties]">
+               <actionmenuitem dynamic ='singleselect' name='informes' value='Informe' action='informenecesidades' showifinvalid='true' showifdisabled='true'/>
+            </insertafter>
+        </menuconfig>
+    </scope>
+    <scope type="do_nfop_fld">
+    	<action id="subscribe" notdefined="true"/>
+    	<action id="subscribeothers" notdefined="true"/>
+    	<action id="addtoclipboard" notdefined="true"/>
+    	<action id="relationships" notdefined="true"/>
+    	<action id="locations" notdefined="true"/>
+    	<action id="sendtodistributionlist" notdefined="true"/>
+    	<action id="sendlocator" notdefined="true"/>
+    </scope>
+    <scope location="/NFO">
+    	<action id="newdocument" notdefined="true"/>
+    	<action id="import" notdefined="true"/>
+    </scope>
+</config>

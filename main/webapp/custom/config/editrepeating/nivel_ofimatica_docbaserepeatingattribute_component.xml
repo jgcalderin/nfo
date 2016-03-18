@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--***********************************************************************-->
+<config version="1.0">
+   <scope>
+      <component id="nivelofimaticadocbaserepeatingattribute" extends="docbaserepeatingattribute:wdk/config/docbaserepeatingattribute_component.xml">
+         <pages>
+            <start>/custom/control/capacidadesOfimaticaRepeatingAttributes.jsp</start>
+         </pages>
+         <class>com.sepe.nfo.controls.CapacidadesOfimaticaDocbaseRepeatingAttribute</class>
+      </component>
+   </scope>
+</config>

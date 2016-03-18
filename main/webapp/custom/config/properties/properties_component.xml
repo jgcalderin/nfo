@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<config version="1.0">
+   <!-- generic version with base functionality -->
+   <scope type="do_nfop_fld">
+      <component id="properties" extends="properties:webcomponent/config/library/properties/properties_component.xml">
+         <pages>
+         	<start>/custom/properties/properties.jsp</start>
+         </pages>
+         <contains>
+            <component>attributes</component>
+         </contains>
+         <class>com.sepe.nfo.components.MyProperties</class>
+      </component>
+   </scope>
+</config>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Developer's Comments
+# Parameters
+/* component                            (Required) The ID of the first contained 
+                                        component to be shown 
+*/
+/* objectId                             (Required) The ID of the object for 
+                                        which properties are to be shown 
+*/
+#
+# Elements
+/* <commitorder>                        Contains <component> elements that 
+                                        specify the order in which properties 
+                                        changes will be saved 
+*/
+/* <component>                          Idenitifies one or more contained 
+                                        components for which changes will be 
+                                        saved in the order the components are 
+                                        listed within <commitorder> 
+*/
+/* <setrepositoryfromobjectid>          Set to true to execute the query against 
+                                        the source repository. Affects reference 
+                                        and foreign objects. 
+*/
+#
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <!--
+      -->
