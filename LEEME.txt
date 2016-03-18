@@ -30,6 +30,11 @@ en el pom.xml. Si se empaquetan los .jrxml tampoco pasa nada.
 - Después hay que instalar el job de listas y ejecutarlo una vez. Este job meterá en los tipos do_nfop_lv_cno, do_nfop_lv_aaee los
 valores que vienen en los ficheros 
 [LISTA DE VALORES]
+- No he conseguido recuperarlas con la API de arquitectura, por lo que las he copiado a mano en un fichero que es el que utliza el
+job de listas.
 - http://intraprod.sepe.es/intranet/oe/
 - ir a la sección "SISPE. CONSULTA DE TABLAS DE CODIFICACIÓN", en la parte de abajo.
+- El excel "SGCodigos-Equivalencias Pro 20140304.xlsx" supuestamente dice que la lista de valores para las AAEE es 
+  TABCCNAE - ActividadEconomica1
+  pero no funciona
 
