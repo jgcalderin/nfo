@@ -28,7 +28,7 @@ en el pom.xml. Si se empaquetan los .jrxml tampoco pasa nada.
 [INSTALACIÓN DE LA APLICACIÓN]
 - El primero paso es ejecutar el fichero dql en el entorno de destino (INVESPACEDESA, INVESPACEPRE, INVESPACE)
 - Después hay que instalar el job de listas y ejecutarlo una vez. Este job meterá en los tipos do_nfop_lv_cno, do_nfop_lv_aaee los
-valores que vienen en los ficheros 
+valores que vienen en los ficheros /NFO/conf/ocupaciones.lv.txt, aaee.lv.txt
 [LISTA DE VALORES]
 - No he conseguido recuperarlas con la API de arquitectura, por lo que las he copiado a mano en un fichero que es el que utliza el
 job de listas.
