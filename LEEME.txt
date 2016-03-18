@@ -1,7 +1,8 @@
 [ENTORNO SEPE LOCAL]
 - MAQUINA: EDIFICIO B, 4ª PLANTA
 - RUTA ECLIPSE LOCAL: en escritorio --> "eclipse.exe - Acceso directo"
-- TOMCAT LOCAL: D:\Archivos de programa\tomcat 6\webapps\mywebtop
+- TOMCAT LOCAL: D:\Archivos de programa\tomcat 6\webapps\mywebtop. No se llama "nfo" si no webtop.
+- Las URL's de local e itacadesa están en la barra de marcadores del Chrome.
 [PROYECTO ECLIPSE]
 - Se llama "NfoWeb"
 - Está subido al Jazz Clear Case.
