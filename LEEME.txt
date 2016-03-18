@@ -1,0 +1,25 @@
+[ENTORNO SEPE LOCAL]
+- MAQUINA: EDIFICIO B, 4ª PLANTA
+- RUTA ECLIPSE LOCAL: en escritorio --> "eclipse.exe - Acceso directo"
+- TOMCAT LOCAL: D:\Archivos de programa\tomcat 6\webapps\mywebtop
+[PROYECTO ECLIPSE]
+- Se llama "NfoWeb"
+- Está subido al Jazz Clear Case.
+- Para subir los cambios al Jazz hay que ir a la vista "Jazz Administration Perspective"-->"Pending Changes" y desde ahí 
+hacer "Checkin All" y después "Deliver" (te obliga a meter un comentario, hacerlo con "Edit Comment")
+- Funciona la depuración en el Tomcat Local.
+[CONSTRUCCION DEL .EAR]
+- Antes de construir el .ear con el Jenkins, es conveniente hacerlo desde el Maven del Eclipse, pero esto tarde un montón, por lo que para
+cambios pequeños no es recomendable.
+- Después de tener los cambios en Jazz, hay que ir a 
+http://10.25.13.147:9257/jenkins/job/disw_Vnfo/
+y construir el proyecto. Se genera un .ear que es lo que hay que solicitar que se despliegue.
+- El .ear debe llevar el dfc.properties, para evitar el problema de las librerías que provocaba el NullPointerException al desplegar
+en WAS. Por tanto, para cada entorno debe haber un .ear con el dfc.properties apropiado.
+[INFORMES]
+- Los informes los hace Erica. De momento sólo hay uno, que está compuesto de 4 ficheros .jasper (plantilla y subplantillas).
+- Están en la ruta 
+main\resources\inem\sappweb\genDocs\apps\disw\nfo\plantillas
+- En el .EAR sólo se se empaquetan los .jasper (que son las plantillas compiladas). Los fuentes no (.jrxml). Para hacerlo se utiliza
+<packagingExcludes>WEB-INF/classes/inem/**/*.jrxml</packagingExcludes>
+en el pom.xml. Si se empaquetan los .jrxml tampoco pasa nada.
