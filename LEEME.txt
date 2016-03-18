@@ -29,3 +29,7 @@ en el pom.xml. Si se empaquetan los .jrxml tampoco pasa nada.
 - El primero paso es ejecutar el fichero dql en el entorno de destino (INVESPACEDESA, INVESPACEPRE, INVESPACE)
 - Después hay que instalar el job de listas y ejecutarlo una vez. Este job meterá en los tipos do_nfop_lv_cno, do_nfop_lv_aaee los
 valores que vienen en los ficheros 
+[LISTA DE VALORES]
+- http://intraprod.sepe.es/intranet/oe/
+- ir a la sección "SISPE. CONSULTA DE TABLAS DE CODIFICACIÓN", en la parte de abajo.
+
