@@ -1,0 +1,4 @@
+1 - Los usuarios quieren utilizar el component ExportToCSV standard, pero este tiene el problema de que el csv que genera 
+com.documentum.web.common.reporting.CSVFormatter
+, utiliza como separador las ",", con lo cual el campo Necesidades (que es de texto largo, 4000 char) no les sale bien si contiene comas.
+Según parece en el código de CSVFormatter, no es difícil cambiarlo, pero esto obligará a sacar el componente que lo llama (ExportToCSV)
