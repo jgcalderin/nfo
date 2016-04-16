@@ -57,8 +57,6 @@ CREATE dm_user object set user_name='zaragoza', set user_login_name='zaragoza', 
 CREATE dm_user object set user_name='ceuta', set user_login_name='ceuta', set user_password='selenio', set user_source='inline password', set client_capability = 2;
 CREATE dm_user object set user_name='melilla', set user_login_name='melilla', set user_password='helio', set user_source='inline password', set client_capability = 2;
 
-create GROUP gr_nfo_admin MEMBERS docelena;
-
 CREATE TYPE  do_nfop_lv_agrup (agrupacion string(256), codigo4 string(4)) WITH SUPERTYPE dm_sysobject PUBLISH;
 CREATE do_nfop_lv_agrup OBJECT set object_name='ADMINISTRACIÓN Y OFICINAS',set agrupacion = 'ADMINISTRACIÓN Y OFICINAS',set codigo4='1313' link '/NFO/conf';
 CREATE do_nfop_lv_agrup OBJECT set object_name='ADMINISTRACIÓN Y OFICINAS',set agrupacion = 'ADMINISTRACIÓN Y OFICINAS',set codigo4='1432' link '/NFO/conf';
@@ -362,7 +360,7 @@ do_nfop_ctp_d_ae string(256) REPEATING (SET label_text='Código A.E.',VALUE ASSIS
 do_nfop_ctp_d_ae_ex string(4000) (SET label_text='Por A.E.'),
 do_nfop_ctp_d_territ string(64) REPEATING (SET label_text='Provincia', VALUE ASSISTANCE IS QRY 'SELECT provincia FROM do_nfop_lv_geo ORDER BY provincia ASC' IS COMPLETE),
 do_nfop_ctp_d_territ_ex string(4000) (SET label_text='Por Territorio'),
-do_nfop_ctp_d_ocup string(256) REPEATING (SET label_text='Ocupaciones', VALUE ASSISTANCE IS QRY 'SELECT codigo8 FROM do_nfop_lv_cno' ORDER BY codigo8 ASC' IS COMPLETE),
+do_nfop_ctp_d_ocup string(256) REPEATING (SET label_text='Ocupaciones', VALUE ASSISTANCE IS QRY 'SELECT codigo8 FROM do_nfop_lv_cno ORDER BY codigo8 ASC' IS COMPLETE),
 do_nfop_ctp_d_ocup_ex string(4000) (SET label_text='Por Ocupación'),
 do_nfop_ctp_d_tam_empr string(32) REPEATING (SET label_text='Tamaño Empresa', VALUE ASSISTANCE IS LIST ('Microempresa','Pequeña','Mediana','Grande') IS COMPLETE),
 do_nfop_ctp_d_tam_emp_ex string(4000) (SET label_text='Por Tamaño Empresa'),
@@ -386,7 +384,7 @@ do_nfop_ctra_t_equipo string(128) REPEATING (SET label_text='Trabajo en Equipo',
 do_nfop_ctra_att_pub string(128) REPEATING (SET label_text='Atención al Público', VALUE ASSISTANCE IS LIST ('Gestión de la relación con clientes y público','Comerciales/Técnicas de venta')),
 do_nfop_ctra_pers string(128) REPEATING (SET label_text='Personales', VALUE ASSISTANCE IS LIST ('Polivalencia','Iniciativa','Creatividad','Compromiso')),
 do_nfop_icua_experiencia string(64) (SET label_text='Requiere Experiencia?', VALUE ASSISTANCE IS LIST ('no','sí','+ de 6 meses','+ de 1 año','+ de 2 años','+ de 3 años','+ de 4 años','+ de 5 años') IS COMPLETE),
-do_nfop_icua_experiencia_ex string(4000) (set label_text='Experiencia requerida') PUBLISH;
+do_nfop_icua_experiencia_ex string(4000) (set label_text='Experiencia requerida'),
 do_nfop_icua_vacantes string(4) (SET label_text='Vacantes sin Cubrir?', VALUE ASSISTANCE IS LIST ('Sí','No') IS COMPLETE),
 do_nfop_icua_vacantes_dif string(32) (SET label_text='Las Vacantes se Cubren', VALUE ASSISTANCE IS LIST ('Fácilmente','Dificultad Media','Difícilmente') IS COMPLETE),
 do_nfop_icua_vacantes_dias integer (SET label_text='Nº de días'),
@@ -410,3 +408,6 @@ do_nfop_aer_titulaciones string(256) REPEATING (SET label_text='Código A.E.',VAL
 do_nfop_aer_perc_contrat double REPEATING (SET label_text='% de Contratación'),
 do_nfop_aer_division string(256) (SET label_text='División con mayor tendencia de contratación',VALUE ASSISTANCE IS QRY 'SELECT distinct(codigo) as dosdig FROM do_nfop_lv_aaee ORDER BY codigo ASC' IS COMPLETE)
 ) WITH SUPERTYPE dm_folder SET label_text = 'Necesidades de Formación de Ocupaciones' PUBLISH;
+
+create GROUP gr_nfo_admin MEMBERS docelena;
+create GROUP gr_nfo_users MEMBERS docelena,alava,albacete,alicante,almeria,avila,badajoz,baleares,barcelona,burgos,caceres,cadiz,castellon,ciudadreal,cordoba,acoruna,cuenca,girona,granada,guadalajara,guipuzcoa,huelva,huesca,jaen,leon,lleida,larioja,lugo,madrid,malaga,murcia,navarra,ourense,asturias,palencia,laspalmas,pontevedra,salamanca,tenerife,cantabria,segovia,sevilla,soria,tarragona,teruel,toledo,valencia,valladolid,vizcaya,zamora,zaragoza,ceuta,melilla;

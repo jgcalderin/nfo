@@ -1,0 +1,18 @@
+create,c,dm_acl
+set,c,l,object_name
+ac_nfo_cabinet
+set,c,l,owner_name
+dm_dbo
+grant,c,l,dm_world,1
+grant,c,l,gr_nfo_admin,7
+grant,c,l,gr_nfo_users,6
+save,c,l
+
+retrieve,c,dm_cabinet where object_name = 'NFO'
+set,c,l,acl_name
+ac_nfo_cabinet
+set,c,l,acl_domain
+dm_dbo
+save,c,l
+
+

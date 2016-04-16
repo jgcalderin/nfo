@@ -5,10 +5,12 @@
          <nlsbundle>MenuBarNlsProp</nlsbundle>
       </component>
       <menuconfig modifies="menubar_tools_menu:webcomponent/config/library/menubar/menubar_component.xml">
-      		<insertbefore path="menu[name=tools_menu].actionmenuitem[action=exportrowstocsv]">
-				<actionmenuitem dynamic="genericnoselect" name="informecompleto" value="Informe Completo" action="informecompleto" showifinvalid="false" showifdisabled="false"/>
-				<actionmenuitem dynamic="multiselect" name="informecompletoonselectedrows" value="Informe Completo(para filas seleccionadas)" action="informecompletoonselectedrows" showifinvalid="false" showifdisabled="false"/>
-			</insertbefore>
+      		<replace path="menu[name=tools_menu].actionmenuitem[action=exportrowstocsv]">
+				<actionmenuitem dynamic="multiselect" name="exportrowstohtml" value="Exportar a HTML (sólo filas seleccionadas)" action="exportrowstohtml" showifinvalid="false" showifdisabled="false"/>
+			</replace>
+      		<replace path="menu[name=tools_menu].actionmenuitem[action=exporttocsv]">
+				<actionmenuitem dynamic="genericnoselect" name="exporttohtml" value="Exportar a HTML" action="exporttohtml" showifinvalid="false" showifdisabled="false"/>
+			</replace>
       </menuconfig>
    </scope>
 </config>

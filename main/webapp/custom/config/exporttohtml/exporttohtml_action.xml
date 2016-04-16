@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config version="1.0">
+    <scope>
+       <action id="exporttohtml">
+         <params>
+            <param name="selection" required="false" />
+         </params>
+         <preconditions>
+           <precondition class="com.documentum.webcomponent.library.actions.ExportToCsvPrecondition"/>
+         </preconditions>
+         <execution class="com.documentum.web.formext.action.LaunchComponent">
+            <container>dialogcontainer</container>
+            <component>exporttohtml</component>
+         </execution>
+         <invocation>
+            <modalpopup>
+               <windowsize>large</windowsize>
+               <refreshparentwindow>never</refreshparentwindow>
+            </modalpopup>
+         </invocation>
+      </action>
+      <action id="exportrowstohtml">
+         <desc>
+            TBD.
+         </desc>
+         <params>
+            <param name="selection" required="false" />
+         </params>
+         <preconditions>
+           <precondition class="com.documentum.webcomponent.library.actions.ExportToCsvPrecondition"/>
+         </preconditions>
+         <execution class="com.documentum.web.formext.action.LaunchComponent">
+            <container>dialogcontainer</container>
+            <component>exporttohtml</component>
+         </execution>
+         <invocation>
+            <modalpopup>
+               <windowsize>large</windowsize>
+               <refreshparentwindow>never</refreshparentwindow>
+            </modalpopup>
+         </invocation>
+      </action>
+     </scope>
+</config>
+ 

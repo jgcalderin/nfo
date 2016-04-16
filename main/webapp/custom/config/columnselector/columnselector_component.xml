@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Confidential Property of Documentum, Inc.                             -->
+<!-- (c) Copyright Documentum, Inc. 2001.                                  -->
+<!-- All Rights reserved.                                                  -->
+<!-- May not be used without prior written agreement                       -->
+<!-- signed by a Documentum corporate officer.                             -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Project        Component Library                                      -->
+<!-- Module         Column Selector                                        -->
+<!-- File           columnselector_component.xml                           -->
+<!-- Description    Column Selector Component Definition                   -->
+<!-- Created on     22nd August 2003                                       -->
+<!-- Tab width      3                                                      -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- VCS Maintained Data                                                   -->
+<!--                                                                       -->
+<!-- Revision       $Revision: 6$                                           -->
+<!-- Modified on    $Date: 2/27/2007 7:12:51 AM$                            -->
+<!--                                                                       -->
+<!-- Log at EOF                                                            -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<config version="1.0">
+   <scope>
+      <component id="columnselector" extends="columnselector:/webcomponent/config/environment/preferences/display/columnselector_component.xml">
+         <pages>
+            <start>/custom/columnselector/columnselector.jsp</start>
+         </pages>
+      </component>
+   </scope>
+</config>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Developer's Comments
+# Parameters
+/* columns                              (Required) A serialized list of items to 
+                                        populate the available items list box. 
+                                        See multiselector control for details on 
+                                        the list format. 
+*/
+/* defaultSelectedColumns               (Optional) A serialized list of items to 
+                                        populate the selected items list box 
+                                        before the user performs an initial 
+                                        selection. 
+*/
+/* docbaseTypes                         (Optional) Specifies the repository 
+                                        types, in addition to the "default" 
+                                        option, to populate the attribute 
+                                        selector's docbase types drop-down 
+                                        list. If omitted, no docbase types will 
+                                        be available for selection. This is a                                    
+                                        simple list of alternating type names 
+                                        and values. To pass in as a string 
+                                        argument to the column selector, the 
+                                        list may be passed to ColumnListUtil. 
+*/
+/* enableOrdering                       (Optional) Boolean: true to enable the 
+                                        user to control the order of columns. 
+*/
+/* selectedColumns                      (Optional) A serialized list of items to 
+                                        populate the selected columns list box. 
+*/
+/* showRepeatingAttributes              (Optional) Specifies whether repeating 
+                                        attributes should be shown when 
+                                        selecting one of the repository types 
+                                        specified by "docbasetypes". Default 
+                                        is true. 
+*/
+#
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
