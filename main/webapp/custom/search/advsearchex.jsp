@@ -94,13 +94,19 @@ topmargin='0' bottommargin='0' leftmargin='0' rightmargin='0'>
 </tr>
 <tr><td colspan='2' class='spacer' height='<%=hrSpacerHeight%>'>&nbsp;</td></tr>
 <tr>
-<td scope='row' class="rightAlignment" valign=top nowrap><dmf:label nlsid='MSG_PROPERTIES' cssclass="fieldlabel"/></td>
-<td class="leftAlignment" valign=top nowrap>
-<%
-%>
-<dmfxs:searchattributegroup name='attributesearchcriteria' tooltipnlsid="MSG_PROPERTIES_TIP" excludetypes='time' excludenames='r_content_size,r_full_content_size,a_is_hidden' casevisible='false' width="200" valuewidth="280" logicaloperatorpos="newline">
-</dmfxs:searchattributegroup>
-</td>
+	<td scope='row' class="rightAlignment" valign=top nowrap><dmf:label nlsid='MSG_PROPERTIES' cssclass="fieldlabel"/></td>
+	<td class="leftAlignment" valign=top nowrap><%%>
+		<dmfxs:searchattributegroup 
+		name='attributesearchcriteria' 
+		tooltipnlsid="MSG_PROPERTIES_TIP" 
+		excludetypes='time' 
+		excludenames='r_content_size,r_full_content_size,a_is_hidden,do_nfop_ctra_att_pub,subject,authors,do_nfop_ctra_dir,a_content_type,r_lock_owner,owner_name,group_name,r_modifier,a_special_app,i_retainer_id,a_publish_formats,a_effective_date,a_expiration_date,keywordds,r_alias_set_id,r_current_state,r_is_virtual_doc,a_is_signed,i_is_replica,a_effective_label,r_lock_machine,a_full_text,r_link_cnt,r_resume_state,r_is_public,a_is_template,r_has_events,a_effective_flag,r_version_label,owner_permit,world_permit,i_is_reference,i_direct_dsc,a_link_resolved,version_label,r_lock_owner,group_permit,do_nfop_ctra_pers,i_latest_flag,r_has_frzn_assembly,owner_name,acl_name,keywords,a_controlling_app,a_category,a_extended_properties,r_aspect_name,controlling_app,r_creator_name,language_code,category_name,i_branch_cnt,item_type,log_entry,r_object_type,type' 
+		casevisible='false' 
+		width="200" 
+		valuewidth="280" 
+		logicaloperatorpos="newline">
+		</dmfxs:searchattributegroup>
+	</td>
 </tr>
 <tr><td colspan='2' class='spacer' height='<%=spacerHeight%>'>&nbsp;</td></tr>
 <tr>

@@ -85,6 +85,21 @@ public class PercentClasesAEDocbaseRepeatingAttribute extends DocbaseRepeatingAt
         		printMessage("El carácter '" + forbiddenCharFound + "' no está permitido. Sólo se permiten carácteres numéricos y puntos decimales.");
         		return;
         	}
+        	try
+        	{
+        		Double d = new Double(textrow);
+        		if (d > 100)
+        		{
+            		printMessage("No se puede introducir un valor mayor que 100.");
+            		return;
+        		}
+        	}
+        	catch (NumberFormatException e)
+        	{
+        		printMessage("Se ha introducido un número no válido.");
+        		return;        		
+        	}
+        	
         	ret.add(textrow);
         }
         

@@ -5,6 +5,12 @@
          <nlsbundle>MenuBarNlsProp</nlsbundle>
       </component>
       <menuconfig modifies="menubar_tools_menu:webcomponent/config/library/menubar/menubar_component.xml">
+      		<insertafter path="menu[name=tools_menu].actionmenuitem[action=exportrowstocsv]">
+				<actionmenuitem dynamic="multiselect" name="exportrowstoexcel" value="Exportar a Excel (sólo filas seleccionadas)" action="exportrowstoexcel" showifinvalid="false" showifdisabled="false"/>
+			</insertafter>
+      		<insertafter path="menu[name=tools_menu].actionmenuitem[action=exporttocsv]">
+				<actionmenuitem dynamic="genericnoselect" name="exporttoexcel" value="Exportar a Excel" action="exporttoexcel" showifinvalid="false" showifdisabled="false"/>
+			</insertafter>
       		<replace path="menu[name=tools_menu].actionmenuitem[action=exportrowstocsv]">
 				<actionmenuitem dynamic="multiselect" name="exportrowstohtml" value="Exportar a HTML (sólo filas seleccionadas)" action="exportrowstohtml" showifinvalid="false" showifdisabled="false"/>
 			</replace>

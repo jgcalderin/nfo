@@ -248,8 +248,9 @@ public class MasterBean
     			
     			if (vacantesdias == 1)
     				mVacantes = mVacantes +  " (1 día)";
-    			else
+    			else if (vacantesdias > 1)
     				mVacantes = mVacantes +  " (" + vacantesdias + " días)";
+    			//si vacantesdias = 0 --> no aparecen los parentesis, como pidio el usuario
     			
     		}
     		else if (vacantessincubrir.equalsIgnoreCase("no"))
