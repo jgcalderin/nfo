@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ ******************************************************************************
+ * (c) Copyright 2007. EMC Corporation.  All Rights Reserved.
+ ******************************************************************************
+ *
+ * Project        Component Library
+ * Description    Export to CSV Component Definition
+ * Created on     Jan 26, 2007
+ * Tab width      3
+ *
+ ******************************************************************************
+ *
+ * PVCS Maintained Data
+ *
+ * Revision       $Revision: 2$
+ * Modified on    $Date: 9/19/2008 2:07:31 PM$
+ *
+ ******************************************************************************
+-->
+<config version='1.0'>
+
+   <scope location="/NFO">
+      <component id="exporttoexcel" extends="exporttocsv:webcomponent/config/library/exporttocsv/exporttocsv_component.xml">
+         <class>com.sepe.nfo.components.ExportToExcel</class>
+      </component>
+   </scope>
+</config>
+
